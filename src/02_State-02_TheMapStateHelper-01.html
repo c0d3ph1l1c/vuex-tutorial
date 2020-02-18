@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>State - The mapState Helper</title>
+</head>
+<body>
+  <div id="app">
+    count: {{ count }}<br>
+    countAlias: {{ countAlias }}<br>
+    countPlusLocalState: {{ countPlusLocalState }} <br>
+    <label for="localCount">localCount</label>
+    <input type="number" v-model.number="localCount">
+    <button @click="increment">+</button>
+    <button @click="decrement">-</button>
+  </div>
+
+  <br>
+
+  <div id="app2">
+    count: {{ count }}
+  </div>
+</body>
+</html>

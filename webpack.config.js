@@ -10,8 +10,8 @@ module.exports = {
     filename: 'js/[name]-[contentHash].js'
   },
   devServer: {
-    contentBase: path.join(__dirname, 'src'),
-    compress: true
+    index: `${sections[sections.length-1]}.html`,
+    filename: `js/${sections[sections.length-1]}.js`
   },
   plugins: [],
   module: {
