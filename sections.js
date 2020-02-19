@@ -6,5 +6,11 @@ module.exports = [
   '03_Getters-01_PropertyStyleAccess-01',
   '03_Getters-02_MethodStyleAccess-01',
   '03_Getters-03_TheMapGettersHelper-01',
+  '04_Mutations-01_CommitWithPayload-01',
+  '04_Mutations-02_ObjectStyleCommit-01',
+  '04_Mutations-03_MutationsFollowVuesReactivityRules-01',
+  '04_Mutations-04_UsingConstantsForMutationTypes-01',
+  '04_Mutations-05_MutationsMustBeSynchronous-01',
+  '04_Mutations-06_CommittingMutationsInComponents-01',
   'index',
 ];
