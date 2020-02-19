@@ -19,6 +19,7 @@
   "homepage": "https://github.com/c0d3ph1l1c/vuex-tutorial#readme",
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.4.2",
@@ -31,6 +32,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"

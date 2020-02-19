@@ -12,5 +12,9 @@ module.exports = [
   '04_Mutations-04_UsingConstantsForMutationTypes-01',
   '04_Mutations-05_MutationsMustBeSynchronous-01',
   '04_Mutations-06_CommittingMutationsInComponents-01',
+  '05_Actions-01',
+  '05_Actions-01_DispatchingActions-01',
+  '05_Actions-02_DispatchingActionsInComponents-01',
+  '05_Actions-03_ComposingActions-01',
   'index',
 ];
