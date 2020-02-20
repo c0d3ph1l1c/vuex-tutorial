@@ -16,5 +16,8 @@ module.exports = [
   '05_Actions-01_DispatchingActions-01',
   '05_Actions-02_DispatchingActionsInComponents-01',
   '05_Actions-03_ComposingActions-01',
+  '06_Modules-01',
+  '06_Modules-01_ModuleLocalState-01',
+  '06_Modules-02_Namespacing-01',
   'index',
 ];
