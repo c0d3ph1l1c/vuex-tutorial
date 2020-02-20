@@ -19,5 +19,6 @@ module.exports = [
   '06_Modules-01',
   '06_Modules-01_ModuleLocalState-01',
   '06_Modules-02_Namespacing-01',
+  '06_Modules-02_Namespacing-02',
   'index',
 ];

@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Vuex, { mapState, mapGetters, mapActions } from 'vuex';
+import Vuex, { mapGetters, mapActions } from 'vuex';
 
 Vue.use(Vuex);
 
@@ -16,7 +16,7 @@ const store = new Vuex.Store({
       getters: {
         // -> getters['account/isAdmin']
         isAdmin(state) {
-          return stateisLogin;
+          return state.isLogin;
         }
       },
       actions: {
@@ -76,14 +76,36 @@ new Vue({
   el: '#app',
   store,
   computed: {
-    
+    ...mapGetters(
+      'account', [
+      'isAdmin',
+      'profile'   
+    ]),
+    ...mapGetters(
+      'account/posts', [
+      'popular'
+    ])
   },
-  methods: {
-    
-  },
+  methods: mapActions('account', [
+    'login'
+  ]),
   template: `
     <div id="app">
-      
+      <button 
+        v-if="!isAdmin"
+        @click="login"
+      >Login</button>
+      <template v-if="isAdmin">
+        <h1>Admin</h1>
+        <ul>
+          <li
+            v-for="(value, key) in profile"
+            :key="key"
+          >{{ key.charAt(0).toUpperCase() + key.substring(1) }}: {{ value }}</li>
+        </ul>
+        <h2>Posts</h2>
+        <p>{{ popular }}</p>
+      </template>
     </div>
   `
 });
