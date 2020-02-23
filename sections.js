@@ -28,5 +28,6 @@ module.exports = [
   '06_Modules-03_DynamicModuleRegistration-01',
   '06_Modules-03_DynamicModuleRegistration-02',
   '06_Modules-04_ModuleReuse-01',
+  // '07_ApplicationStructure-01',
   'index',
 ];
