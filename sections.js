@@ -25,5 +25,8 @@ module.exports = [
   '06_Modules-02_Namespacing-05',
   '06_Modules-02_Namespacing-06',
   '06_Modules-02_Namespacing-07',
+  '06_Modules-03_DynamicModuleRegistration-01',
+  '06_Modules-03_DynamicModuleRegistration-02',
+  '06_Modules-04_ModuleReuse-01',
   'index',
 ];
