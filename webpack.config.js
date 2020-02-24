@@ -1,6 +1,7 @@
 const path = require('path');
 const sections = require('./sections');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode: 'development',
@@ -13,7 +14,9 @@ module.exports = {
     index: `${sections[sections.length-1]}.html`,
     filename: `js/${sections[sections.length-1]}.js`
   },
-  plugins: [],
+  plugins: [
+    new VueLoaderPlugin()
+  ],
   module: {
     rules: [
       {
@@ -42,6 +45,10 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: 'file-loader'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       }
     ]
   },

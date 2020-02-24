@@ -21,7 +21,7 @@ export default {
   computed: mapState({
     products: state => state.products.all
   }),
-  methods: mapAction('cart', [
+  methods: mapActions('cart', [
     'addProductToCart'
   ]),
   created() {
