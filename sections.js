@@ -29,5 +29,6 @@ module.exports = [
   '06_Modules-03_DynamicModuleRegistration-02',
   '06_Modules-04_ModuleReuse-01',
   '07_ApplicationStructure-01',
+  // '08_Plugins-01_CommittingMutationsInsidePlugins-01',
   'index',
 ];
