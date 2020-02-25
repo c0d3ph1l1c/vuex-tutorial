@@ -4,9 +4,13 @@ export default function createWebSocketPlugin(socket) {
       store.commit('receiveData', data);
     });
     store.subscribe(mutation => {
-      if(mutation.type === 'UPDATE_DATA') {
+      if(mutation.type === 'addData') {
+        socket.emit('add', mutation.payload);
+      } else if(mutation.type === 'updateData') {
         socket.emit('update', mutation.payload);
-      }
+      } else if(mutation.type === 'removeData') {
+        socket.emit('remove', mutation.payload);
+      } 
     });
   };
 }

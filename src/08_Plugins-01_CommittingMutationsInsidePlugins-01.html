@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plugins - Committing Mutations Inside Plugins</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/fontawesome.min.js"></script>
+  <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <style>
+    .tasks {
+      padding-left: 0;
+    }
+
+    .task {
+      list-style: none;
+      cursor: pointer;
+      width: 230px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 2px 2px 2px 2px rgba(200,200,200,0.3);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .taskInput, .addBtn { 
+      padding: 6px 10px; 
+      border-radius: 5px;
+    }
+
+    .addBtn {
+      background: #88f;
+      color: #fff;
+      outline: none;
+      border: none;
+    }
+
+    .taskName,
+    .editTaskName {
+      display: inline-block;
+      width: 170px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .fa-pencil-alt,
+    .fa-check,
+    .fa-trash-alt {
+      margin-left: 10px;
+    }
+
+    .fa-pencil-alt { color: #f9a825; }
+    .fa-check { color: #4caf50; }
+    .fa-trash-alt { color: #f00; }
+
+    .task-enter, .task-leave-to {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    .task-leave-active {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
