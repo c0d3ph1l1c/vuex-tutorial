@@ -31,5 +31,6 @@ module.exports = [
   '07_ApplicationStructure-01',
   '08_Plugins-01_CommittingMutationsInsidePlugins-01',
   '08_Plugins-02_TakingStateSnapshots-01',
+  '09_StrictMode-01_DevelopmentVsProduction-01',
   'index',
 ];
