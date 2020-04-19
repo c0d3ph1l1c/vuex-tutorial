@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        ul {
+            padding-left: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        li {
+            padding-left: 1rem;
+        }
+        
+        li:nth-child(odd) {
+            background-color: #bee;
+        }
+        
+        li:nth-child(even) {
+            background-color: #feb;
+        }
+        
+        li a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            height: 2.5rem;
+            line-height: 2.5rem;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <ul></ul>
+
+    <script>
+        let ul = document.querySelector('ul');
+        fetch('./sections.js')
+            .then(data => data.text())
+            .then(data => eval(data.substring(data.indexOf('=') + 2)))
+            .then(data => {
+                ul.innerHTML = data.map(filename =>
+                    `<li><a href="${filename}.html">${filename}</a></li>`
+                ).join('\n');
+            });
+    </script>
+</body>
+
+</html>
